@@ -23,8 +23,8 @@ connection.once('open', () => {
 const exercisesRouter = require('./routes/exercises');
 const usersRouter = require('./routes/users');
 
-app.use('routes/exercises', exercisesRouter);
-app.use('routes/users', usersRouter);
+app.use('/exercises', exercisesRouter);
+app.use('/users', usersRouter);
 
 app.listen(port, () => {
     console.log('Server is on port: 5000');
